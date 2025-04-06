@@ -1,0 +1,29 @@
+Explicación del código:
+
+    Contenedor desplazable (scroll-content):
+
+        Utilizamos overflow-x: auto para permitir el desplazamiento horizontal.
+
+        Usamos white-space: nowrap para evitar que los elementos se envuelvan en lugar de desbordarse horizontalmente.
+
+        El gap entre los elementos permite que haya un espacio entre cada ítem.
+
+    Elementos (item):
+
+        Se aplican estilos básicos a los elementos dentro del contenedor para que sean visibles y fáciles de interactuar.
+
+    Flechas:
+
+        Los botones de las flechas (scroll-button) tienen una apariencia redondeada y un color de fondo verde.
+
+        El uso de onClick con las funciones scrollLeft y scrollRight permite mover el contenedor hacia la izquierda o la derecha cuando se hace clic en las flechas.
+
+        Las flechas están representadas por los caracteres &lt; (flecha hacia la izquierda) y &gt; (flecha hacia la derecha).
+
+    Funciones de desplazamiento:
+
+        scrollLeft: Desplaza el contenido 200 píxeles a la izquierda.
+
+        scrollRight: Desplaza el contenido 200 píxeles a la derecha.
+
+        Ambas funciones usan scrollBy, que mueve el contenedor de manera suave con la opción behavior: 'smooth'.
