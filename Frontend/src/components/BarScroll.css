@@ -1,6 +1,13 @@
 /* ScrollBar.css */
 
+.scroll-container{
+  background-color: #eeeeee;
+  display: inline-block;
+  margin-top: 20px;
+}
+
 .scroll-bar-container {
+  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,20 +17,12 @@
   .scroll-content {
     display: flex;
     overflow-x: auto; /* Habilita el desplazamiento horizontal */
-    width: 400px; /* Ancho del contenedor con scroll */
+    width: 90%; /* Ancho del contenedor con scroll */
     white-space: nowrap; /* Evita que los elementos se envuelvan */
     gap: 10px; /* Espaciado entre los elementos */
     padding: 10px 0; /* Espaciado en la parte superior e inferior */
   }
-  
-  .item {
-    background-color: #4caf50;
-    color: white;
-    padding: 20px;
-    min-width: 100px; /* Ancho mínimo de cada item */
-    text-align: center;
-    border-radius: 8px;
-  }
+
   
   .scroll-button {
     background-color: #4caf50;
@@ -32,7 +31,7 @@
     padding: 10px;
     cursor: pointer;
     font-size: 20px;
-    border-radius: 50%;
+    border-radius: 5%;
     margin: 0 10px;
   }
   

@@ -1,10 +1,20 @@
 import React, { useRef } from 'react';
+import { Card } from './Card';
 import './BarScroll.css'
 
-export const BarScroll: React.FC = () => {
+interface Producto {
+  titulo:string;
+  precio:number;
+}
+
+interface PropProducto {
+  listaProducto:Producto[];
+  tipo:string
+}
+
+export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
   // Referencia al contenedor desplazable
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-
   // Función para desplazar hacia la izquierda
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -20,25 +30,26 @@ export const BarScroll: React.FC = () => {
   };
 
   return (
+    <div className='scroll-container row'>
+      <div className='container-titulo row row-cols-2'>
+        <h6>{tipo}</h6>
+        <a href=''>Ver más</a>
+      </div>
     <div className="scroll-bar-container">
       <button className="scroll-button left" onClick={scrollLeft}>
         &lt; {/* Flecha izquierda */}
       </button>
       <div className="scroll-content" ref={scrollContainerRef}>
-        {/* Contenido desplazable */}
-        <div className="item">Item 1</div>
-        <div className="item">Item 2</div>
-        <div className="item">Item 3</div>
-        <div className="item">Item 4</div>
-        <div className="item">Item 5</div>
-        <div className="item">Item 6</div>
-        <div className="item">Item 7</div>
-        <div className="item">Item 8</div>
+        {listaProducto.map((element) => (
+          <Card titulo={element.titulo} precio={element.precio}/>
+        ))}
       </div>
       <button className="scroll-button right" onClick={scrollRight}>
         &gt; {/* Flecha derecha */}
       </button>
     </div>
+    </div>
+    
   );
 };
 

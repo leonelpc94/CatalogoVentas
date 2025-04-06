@@ -1,17 +1,18 @@
+import './Card.css'
+
 interface PropsCard {
     titulo:string;
     precio:number
 }
 
 export const Card:React.FC<PropsCard> = ({titulo,precio}) =>{
-    const estilo = {"width": "18rem;"} 
     return (
         <>
-        <div className="card" style={estilo}>
-            <img src="..." className="card-img-top" alt="....."/>
-            <div className="card-body">
-                <h5 className="card-title">{titulo}</h5>
-                <p className="card-text">{precio}</p>
+        <div className="item">
+            <img src="..." className="item-img-top" alt="....."/>
+            <div className="item-body">
+                <h5 className="item-title">{titulo}</h5>
+                <p className="item-text">{precio}</p>
             </div>
         </div>
         </>
