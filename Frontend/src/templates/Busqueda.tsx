@@ -1,13 +1,15 @@
 import { NavLateral } from "../components/NavLateral"
 import { Pie } from "../components/Pie"
 import { Navegador } from "../components/Navegador"
-import React, { ReactNode } from "react"
+import React from "react"
+import { Card } from "../components/Card"
+import { useParams } from "react-router-dom"
+import { Pedido } from "../utils/Pedido"
 
-interface PropsBusqueda {
-  card:ReactNode[]
-}
 
-export const Busqueda:React.FC <PropsBusqueda> = ({card}) =>{
+export const Busqueda:React.FC  = () =>{
+  const {id} = useParams();
+  const lista = Pedido(id)
     return (
         <>
             <Navegador/>
@@ -16,17 +18,16 @@ export const Busqueda:React.FC <PropsBusqueda> = ({card}) =>{
                 <NavLateral/>
                 </div>  
               <div className="col-10">
-                <h5>Resultados</h5>
+                <h5>Resultados: {id}</h5>
                 <div className="container text-center">
                   <div className="row row-cols-2">
-                    {card.map((elemento,index)=>(
-                      <div key={index} className="col">{elemento}</div>
+                    {lista.map((elemento,index)=>(
+                      <div key={index} className="col"><Card titulo={elemento.titulo} precio={elemento.precio}/></div>
                     ))}
                   </div>
                 </div>
               </div> 
             </div>
-            
             <Pie/>
         </>
     )

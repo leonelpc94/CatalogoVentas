@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Card } from './Card';
 import './BarScroll.css'
+import { Link } from 'react-router-dom';
 
 interface Producto {
   titulo:string;
@@ -33,7 +34,7 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
     <div className='scroll-container row'>
       <div className='container-titulo row row-cols-2'>
         <h6>{tipo}</h6>
-        <a href=''>Ver más</a>
+        <Link to={`/resultado/${tipo}`}>Ver más</Link>
       </div>
     <div className="scroll-bar-container">
       <button className="scroll-button left" onClick={scrollLeft}>
