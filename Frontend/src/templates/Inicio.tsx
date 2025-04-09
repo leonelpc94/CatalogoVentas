@@ -10,8 +10,8 @@ export const Inicio:React.FC = () => {
     return (
         <>
         <Navegador></Navegador>
-        <BarScroll listaProducto={listaProductoFruta} tipo={"Frutas"}/>
-        <BarScroll listaProducto={listaProductoVerdura} tipo="Verduras"/>
+        <BarScroll listaProducto={listaProductoFruta}/>
+        <BarScroll listaProducto={listaProductoVerdura}/>
         <Pie/>
         </>
     )

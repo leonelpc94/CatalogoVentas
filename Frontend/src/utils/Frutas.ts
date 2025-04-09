@@ -2,59 +2,73 @@ export const listaFrutas = ()  =>{
     const frutas = [
         {
             "titulo":"Piña",
-            "precio":3000
+            "precio":3000,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Pomelo",
-            "precio":2000
+            "precio":2000,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Pera",
-            "precio":2400
+            "precio":2400,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Mango",
-            "precio":4000
+            "precio":4000,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Coco",
-            "precio":2500
+            "precio":2500,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Manzana",
-            "precio":2500
+            "precio":2500,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Mora",
-            "precio":5300
+            "precio":5300,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Mispero",
-            "precio":3000
+            "precio":3000,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Fresa",
-            "precio":6000
+            "precio":6000,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Cereza",
-            "precio":2600
+            "precio":2600,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Limon",
-            "precio":2700
+            "precio":2700,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Melon",
-            "precio":1400
+            "precio":1400,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Tamarindo",
-            "precio":2190
+            "precio":2190,
+            "categoria":"Fruta"
         },
         {
             "titulo":"Granda",
-            "precio":7200
+            "precio":7200,
+            "categoria":"Fruta"
         },
     ]
     return frutas

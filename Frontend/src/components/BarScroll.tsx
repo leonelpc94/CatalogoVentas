@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 interface Producto {
   titulo:string;
   precio:number;
+  categoria:string
 }
 
 interface PropProducto {
   listaProducto:Producto[];
-  tipo:string
 }
 
-export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
+export const BarScroll: React.FC <PropProducto> =({listaProducto}) => {
   // Referencia al contenedor desplazable
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   // Función para desplazar hacia la izquierda
@@ -32,9 +32,9 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
 
   return (
     <div className='scroll-container row'>
-      <div className='container-titulo row row-cols-2'>
-        <h6>{tipo}</h6>
-        <Link to={`/resultado/${tipo}`}>Ver más</Link>
+      <div className='container-titulo row'>
+        <h6 className='col-md-1'>{listaProducto[0].categoria}</h6>
+        <Link to={`/resultado/${listaProducto[0].categoria}`} className='col-md-10'>Ver más</Link>
       </div>
     <div className="scroll-bar-container">
       <button className="scroll-button left" onClick={scrollLeft}>
@@ -42,7 +42,7 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
       </button>
       <div className="scroll-content" ref={scrollContainerRef}>
         {listaProducto.map((element) => (
-          <Card titulo={element.titulo} precio={element.precio}/>
+          <Card titulo={element.titulo} precio={element.precio} categoria={element.categoria}/>
         ))}
       </div>
       <button className="scroll-button right" onClick={scrollRight}>

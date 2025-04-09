@@ -5,5 +5,29 @@ export const Pedido = (tipoProducto:string) => {
     if (tipoProducto == "Verduras"){
         return listaVerduras()
     }
-    return listaFrutas()
+    if (tipoProducto == "Fruta"){
+        return listaFrutas()
+    }
+    return []
+    
+}
+export const unProducto = (nombre:string,categoria:string) =>{
+    if (categoria == "Verduras"){
+        const lista = listaVerduras()
+        lista.forEach((elemento)=>{
+            if(elemento.titulo == nombre){
+                return elemento
+            }
+        })
+    }
+    if (categoria == "Verduras"){
+        const lista = listaFrutas()
+        lista.forEach((elemento)=>{
+            if(elemento.titulo == nombre){
+                return elemento
+            }
+        })
+    }
+    return {}
+    
 }
