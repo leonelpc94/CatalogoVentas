@@ -22,7 +22,7 @@ export const Busqueda:React.FC  = () =>{
                 <div className="container text-center">
                   <div className="row row-cols-2">
                     {lista.map((elemento,index)=>(
-                      <div key={index} className="col"><Card titulo={elemento.titulo} precio={elemento.precio} categoria={elemento.categoria}/></div>
+                      <div key={index} className="col"><Card titulo={elemento.titulo} precio={elemento.precio} img={elemento.img} categoria={id}/></div>
                     ))}
                   </div>
                 </div>

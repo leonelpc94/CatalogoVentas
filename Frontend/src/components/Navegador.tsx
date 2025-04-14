@@ -10,7 +10,7 @@ export const Navegador: React.FC = () =>{
                 <div className="row">
                     <div className="col">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li className="nav-item">
+                    <li className="nav-item nav-link active" aria-current="page">
                         <Link to='/'>Home</Link>
                     </li>
                     <li className="nav-item dropdown">

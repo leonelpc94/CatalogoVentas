@@ -1,75 +1,103 @@
 export const listaFrutas = ()  =>{
     const frutas = [
         {
+            "id":"f1",
+            "img":"https://laolacaribe.com/wp-content/uploads/1-85-1024x926.jpg",
             "titulo":"Piña",
             "precio":3000,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f2",
+            "img":"https://www.tgfresh.com/wp-content/uploads/2019/03/pomelo-1024x898.jpg",
             "titulo":"Pomelo",
             "precio":2000,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f3",
+            "img":"https://mujerconsalud.com/wp-content/uploads/2020/04/pera-712x450.jpg",
             "titulo":"Pera",
             "precio":2400,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f4",
+            "img":"https://okdiario.com/coolthelifestyle/img/2022/10/29/pexels-bridgette-lynn-5640033-1536x2048.jpg",
             "titulo":"Mango",
             "precio":4000,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f5",
+            "img":"https://naturalmentebonita.bioextratus.com.br/wp-content/uploads/2021/06/coco-scaled.jpg",
             "titulo":"Coco",
             "precio":2500,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f6",
+            "img":"https://comefruta.es/wp-content/uploads/2014/12/mix-manzanas-4-var.jpg",
             "titulo":"Manzana",
             "precio":2500,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f7",
+            "img":"https://noticias24carabobo.com/wp-content/uploads/2017/07/mora-672x420.jpg",
             "titulo":"Mora",
             "precio":5300,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f8",
+            "img":"https://www.alphapedia.net/wp-content/uploads/2020/11/IMAGEN-DEL-NISPERO.jpg",
             "titulo":"Mispero",
             "precio":3000,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f9",
+            "img":"https://idescubre.fundaciondescubre.es/files/2020/04/Foto-recurso-1.jpg",
             "titulo":"Fresa",
             "precio":6000,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f10",
+            "img":"https://www.goodfruit.com/es/wp-content/uploads/sites/2/2019/08/littleCherryDalles-3872tj-TOC.jpg",
             "titulo":"Cereza",
             "precio":2600,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f11",
+            "img":"https://cloudfront-us-east-1.images.arcpublishing.com/eluniversal/HOJU44BVVZA2BECAHS7VRKC5EQ.jpg",
             "titulo":"Limon",
             "precio":2700,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f12",
+            "img":"https://sukoharjonews.com/wp-content/uploads/2023/05/mini_l-intro-1655590048.jpg",
             "titulo":"Melon",
             "precio":1400,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f13",
+            "img":"https://azafranbolivia.com/wp-content/uploads/2022/01/tamarindo-beneficios-propiedades-salud.jpg",
             "titulo":"Tamarindo",
             "precio":2190,
-            "categoria":"Fruta"
+            "descripcion":""
         },
         {
+            "id":"f14",
+            "img":"https://blog.iafstore.com/static/img/posts/image/vyp5fkkyrlsxnixp1f42.jpg",
             "titulo":"Granda",
             "precio":7200,
-            "categoria":"Fruta"
-        },
+            "descripcion":""
+        }
     ]
     return frutas
 }
