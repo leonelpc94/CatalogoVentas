@@ -1,42 +1,42 @@
 import { useParams } from "react-router-dom"
 import { Navegador } from "../components/Navegador"
 import { Pie } from "../components/Pie"
-import { Pedido, unProducto } from "../utils/Pedido"
 import { BarScroll } from "../components/BarScroll"
+import { Pedidos } from "../utils/Pedidos"
 
 
 export const Producto:React.FC = ( ) => {
-    const {nombre, categoria} = useParams()
-    const producto = unProducto(nombre,categoria)
-    const listadoProducto = Pedido(categoria)
+    //se utiliza para capturar valores pasados por uan url
+    const {categoria,id} = useParams()
+    const listado = Pedidos()
     return (
         <>
         <Navegador/>
-        {producto == null ?(
-            <div>Producto agotado</div>
-        ):(
-            <div className="container text-center">
+        {listado.map((elemeto, index)=>(
+            elemeto.id == id?
+            <div key={index} className="container text-center">
             <div className="row">
                 <div className="col">
-                imagen
+                    <img src={elemeto.img} style={{"height":"400px"}}/>
                 </div>
                 <div className="col">
                 <ul>
                     <li>
-                        {}
+                        {elemeto.titulo}
                     </li>
                     <li>
-                        {producto}
+                        {elemeto.precio}
                     </li>
                     <li>
-                        descripcion
+                        {elemeto.descripcion}
                     </li>
                 </ul>
                 </div>
             </div>
         </div>
-        )}
-        <BarScroll listaProducto={listadoProducto}/>
+        :null
+        ))}
+        <BarScroll listaProducto={listado} tipo={categoria}/>
         <Pie/>
         </>
     )

@@ -1,14 +1,14 @@
 import React, { useRef } from 'react';
 import { Card } from './Card';
 import './BarScroll.css'
-import { Link } from 'react-router-dom';
 
 interface Producto {
     id:string,
     img:string,
     titulo:string,
     precio:number,
-    descripcion:string
+    descripcion:string,
+    categoria:string
 }
 
 interface PropProducto {
@@ -37,7 +37,6 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
     <div className='scroll-container row'>
       <div className='container-titulo row'>
         <h6 className='col-md-1'>{tipo}</h6>
-        <Link to={`/resultado/${tipo}`} className='col-md-10' >Ver más</Link>
       </div>
     <div className="scroll-bar-container">
       <button className="scroll-button left" onClick={scrollLeft}>
@@ -45,7 +44,8 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
       </button>
       <div className="scroll-content" ref={scrollContainerRef}>
         {listaProducto.map((element) => (
-          <Card titulo={element.titulo} precio={element.precio} img={element.img} categoria={tipo}/>
+          element.categoria == tipo?
+          <Card titulo={element.titulo} precio={element.precio} img={element.img} categoria={element.categoria} id={element.id}/>:null
         ))}
       </div>
       <button className="scroll-button right" onClick={scrollRight}>

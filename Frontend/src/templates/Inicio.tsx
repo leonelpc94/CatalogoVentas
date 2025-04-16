@@ -1,17 +1,15 @@
 import { Navegador } from "../components/Navegador"
 import { BarScroll } from "../components/BarScroll"
 import { Pie } from "../components/Pie"
-import { listaFrutas } from "../utils/Frutas"
-import { listaVerduras } from "../utils/Verduras"
+import { Pedidos } from "../utils/Pedidos"
 
 export const Inicio:React.FC = () => {
-    const listaProductoFruta = listaFrutas()
-    const listaProductoVerdura = listaVerduras()
+    const listadoProducto = Pedidos()
     return (
         <>
         <Navegador></Navegador>
-        <BarScroll listaProducto={listaProductoFruta} tipo = "Fruta"/>
-        <BarScroll listaProducto={listaProductoVerdura} tipo = "Verduras"/>
+        <BarScroll listaProducto={listadoProducto} tipo = "Fruta"/>
+        <BarScroll listaProducto={listadoProducto} tipo = "Verduras"/>
         <Pie/>
         </>
     )
