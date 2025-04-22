@@ -14,7 +14,7 @@ export const Navegador: React.FC = () =>{
     return(
         <>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
+        <div className="container-fluid" style={{"background-color": "#4ADE80","padding":"10px"}}>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <div className="container text-center">
                 <div className="row">
@@ -24,20 +24,19 @@ export const Navegador: React.FC = () =>{
                         <Link to='/'><img src="../src/assets/mini.png" style={{"height":"30px"}}/></Link>
                     </li>
                     <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Categoria
-                    </a>
-                    <ul className="dropdown-menu">
-                        <li><Link className="dropdown-item" to={"/fruta"}>Frutas</Link></li>
-                        <li><Link className="dropdown-item" to={"/Verduras"}>Verduras</Link></li>
-                    </ul>
+                        <details className="nav-link">
+                            <summary style={{"color":"black"}}>Categoria</summary>
+                            <p><Link className="dropdown-item" to={"/fruta"}>Frutas</Link></p>
+                            <p><Link className="dropdown-item" to={"/Verduras"}>Verduras</Link></p>
+                            <p>hola carajo</p>
+                        </details>
                     </li>
                 </ul>
                     </div>
                     <div className="col">
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" value={producto} onChange={buscar} type="search" placeholder="Buscar" aria-label="Search"/>
-                            <button className="btn btn-outline-success" onClick={handlerBuscar}>Search</button>
+                            <button className="btn btn-outline-success" style={{"color":"black"}} onClick={handlerBuscar}>Search</button>
                         </form>
                     </div>
                     <div className="col">

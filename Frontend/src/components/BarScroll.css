@@ -1,9 +1,9 @@
 /* ScrollBar.css */
 
 .scroll-container{
-  background-color: #eeeeee;
+  background-color: white;
   display: inline-block;
-  margin-top: 20px;
+  margin: 50px;
 }
 
 .scroll-bar-container {
@@ -23,7 +23,9 @@
     padding: 10px 0; /* Espaciado en la parte superior e inferior */
   }
 
-  
+  .scroll-container-titulo{
+    padding-left: 30px;
+  }
   .scroll-button {
     background-color: white;
     color: black;

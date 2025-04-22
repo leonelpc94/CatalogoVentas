@@ -35,9 +35,7 @@ export const BarScroll: React.FC <PropProducto> =({listaProducto,tipo}) => {
 
   return (
     <div className='scroll-container row'>
-      <div className='container-titulo row'>
-        <h6 className='col-md-1'>{tipo}</h6>
-      </div>
+        <h5 className='scroll-container-titulo'>Recomendaciones de {tipo}</h5>
     <div className="scroll-bar-container">
       <button className="scroll-button left" onClick={scrollLeft}>
         &lt; {/* Flecha izquierda */}

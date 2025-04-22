@@ -17,15 +17,15 @@ export const Producto:React.FC = ( ) => {
             <div key={index} className="container text-center">
             <div className="row">
                 <div className="col">
-                    <img src={elemeto.img} style={{"height":"400px"}}/>
+                    <img src={elemeto.img} style={{"height":"400px","border-radius":"10px"}}/>
                 </div>
                 <div className="col">
-                <ul>
+                <ul className="list-unstyled" style={{"text-align": "left"}}> 
                     <li>
-                        {elemeto.titulo}
+                       <h3 style={{"font-weight":"100","font-family":"cursive","font-size":"40px"}}>{elemeto.titulo}</h3> 
                     </li>
-                    <li>
-                        {elemeto.precio}
+                    <li style={{"font-size":"50px"}}>
+                        $ {elemeto.precio}
                     </li>
                     <li>
                         {elemeto.descripcion}

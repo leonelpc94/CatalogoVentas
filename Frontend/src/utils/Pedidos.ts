@@ -5,7 +5,7 @@ export const Pedidos = () =>{
             "img":"https://laolacaribe.com/wp-content/uploads/1-85-1024x926.jpg",
             "titulo":"Piña",
             "precio":3000,
-            "descripcion":"",
+            "descripcion":"Conocida en muchas regiones del mundo como ananá o ananás, la piña es una planta tropical proveedora de un fruto muy apreciado y de una importante comercialización mundial, tanto para su consumo fresco como en conserva.",
             "categoria":"Fruta"
         },
         {
@@ -59,7 +59,7 @@ export const Pedidos = () =>{
         {
             "id":"f8",
             "img":"https://www.alphapedia.net/wp-content/uploads/2020/11/IMAGEN-DEL-NISPERO.jpg",
-            "titulo":"Mispero",
+            "titulo":"Nispero",
             "precio":3000,
             "descripcion":"",
             "categoria":"Fruta"

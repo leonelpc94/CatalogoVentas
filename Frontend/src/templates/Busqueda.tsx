@@ -22,7 +22,7 @@ export const Busqueda:React.FC  = () =>{
                   <div className="row row-cols-2">
                     {lista.map((elemento,index)=>(
                       //toLowerCase() se utiliza para que no importe si las palabaras estan en mayusculas o no
-                      elemento.categoria.toLowerCase() && elemento.titulo.toLowerCase() == producto?
+                      elemento.categoria.toLowerCase() && elemento.titulo.toLowerCase() === producto ?
                       <div key={index} className="col"><Card titulo={elemento.titulo} precio={elemento.precio} categoria={elemento.categoria} img={elemento.img} id={elemento.id}/></div>:null
                     ))}
                   </div>
