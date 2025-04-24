@@ -28,7 +28,6 @@ export const Navegador: React.FC = () =>{
                             <summary style={{"color":"black"}}>Categoria</summary>
                             <p><Link className="dropdown-item" to={"/fruta"}>Frutas</Link></p>
                             <p><Link className="dropdown-item" to={"/Verduras"}>Verduras</Link></p>
-                            <p>hola carajo</p>
                         </details>
                     </li>
                 </ul>
